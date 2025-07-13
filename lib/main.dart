@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'widgets/padding_test.dart';
 import 'screen/login_screen.dart';
 
 void main() => runApp(const MyApp());
