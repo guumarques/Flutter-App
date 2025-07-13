@@ -5,10 +5,15 @@ class PaddingTeste extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.blueGrey, // Usei uma cor existente no Flutter
-      padding: const EdgeInsets.all(50),
-      child: const Text('Alguma coisa'),
+    return Container( 
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        color: Colors.azulGaivota  
+      ),
+      padding: EdgeInsets.all(60.0),
+      margin: EdgeInsets.all(20.0),
+      alignment: Alignment.center,
+      child: const Text('Boring as Fuck'),
     );
   }
 }

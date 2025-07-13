@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'widgets/counter_widget.dart';
 import 'widgets/padding_test.dart';
-import 'widgets/sized_box_test.dart';
+import 'screen/login_screen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -13,18 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       // Estrutura do app com tema Material Design
-      home: Scaffold(
-        appBar: AppBar(title: const Text('App com Padding')),
-        body: Center(
-          child:Column(
-            children: [
-              CounterWidget(),
-              PaddingTeste(),
-              SizedBoxTeste()
-            ],
-          )
-        ),
-      ),
+      home: Login()
     );
   }
 }
