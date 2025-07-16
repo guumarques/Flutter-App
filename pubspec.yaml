@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   rename_app: ^1.6.5
   flutter_svg: ^2.0.7
+  animated_text_kit: ^4.2.2
 
 
 dev_dependencies:
