@@ -41,7 +41,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
         return SlideTransition(
           position: offsetAnimation,
-          child: child,
+          child: FadeTransition(opacity: animation,
+          child: child,),
         );
       },
     );
