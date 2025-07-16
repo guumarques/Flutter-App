@@ -1,21 +1,74 @@
-<<<<<<< HEAD
-# myapp
+# Cronus
 
-A new Flutter project.
+# 📅 **Aplicação de criação de cronograma**
 
-## Getting Started
+Bem-vindo ao repositório do **Aplicativo de Cronograma**, uma solução prática para gerenciar suas tarefas e otimizar sua rotina diária.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## 📥 **Download do Aplicativo**
+Clique no link abaixo para baixar o APK e instalar o aplicativo em seu dispositivo Android:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+🔗 [Em breve](https://)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-=======
-# Flutter-App
-Esse projeto foi criado para recriar o aplicativo Cronus, desenvolvido unicamente no Android Studio
->>>>>>> bd5bf508a63779505b725ea7db16074602b72296
+---
+
+## 🛠️ **Instalação**
+1. Faça o download do arquivo APK usando o link acima.
+2. No seu dispositivo Android:
+   - Vá para **Configurações > Segurança > Fontes desconhecidas** e habilite esta opção para permitir a instalação.
+3. Abra o arquivo APK e siga as instruções na tela para concluir a instalação.
+
+---
+
+## 📖 **Modo de Uso**
+
+### 📝 **1. Tela de Login**
+- **Entrar**: Digite seu email e senha cadastrados.
+- **Esqueci minha senha**: Redefina sua senha em caso de perda.
+- **Cadastro**: Caso não tenha uma conta, clique para criar uma.
+
+### 🧾 **2. Tela de Cadastro**
+- Preencha todos os campos obrigatórios:
+  - **Nome**
+  - **Email**: Deve ser um email ativo (ex.: Gmail).
+  - **Senha**: Mínimo de 6 caracteres.
+- Após o cadastro, você pode realizar login normalmente.
+
+### 🔑 **3. Redefinição de Senha**
+- Clique em **Esqueci minha senha** na tela de login.
+- Informe seu email para receber um link de redefinição.
+- Acesse o link no email e escolha uma nova senha.
+
+### 🏠 **4. Tela Principal**
+- Após autenticar, você será levado para a **tela principal**, que exibe:
+  - O calendário para gerenciar suas tarefas.
+  - Suas atividades cadastradas.
+
+### 📋 **5. Aba Lateral**
+A aba lateral contém as seguintes opções:
+- **Atividades**: Visualize todas as suas tarefas registradas.
+- **Deslogar**: Saia da sua conta no aplicativo.
+
+### ➕ **6. Adicionar uma Tarefa**
+- Clique em uma **data no calendário** (presente ou futura).
+- Preencha os campos:
+  - **Título**
+  - **Descrição**
+  - **Hora**
+  - **Prioridade** (alta, média ou baixa).
+- Após salvar, a atividade será exibida com cores distintas:
+  - **Vermelho**: Alta prioridade.
+  - **Amarelo**: Prioridade média.
+  - **Verde**: Sem urgência.
+
+
+
+## 📧 **Contato**
+Caso tenha dúvidas ou sugestões, entre em contato:
+- Email: [gustavo.s@ges.inatel.br](gustavo.s@ges.inatel.br)
+
+---
+
+Desenvolvido com ❤️ por [Gustavo].
+
