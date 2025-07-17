@@ -23,11 +23,15 @@ class Login extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Image.asset(
-                "assets/images/calendar_icon.png",
-                width: 200,
-                height: 200,
+              Hero(
+                tag: 'calendar-logo',
+                child: Image.asset(
+                  "assets/images/calendar_icon.png",
+                  width: 200,
+                  height: 200,
+                ),
               ),
+
               const SizedBox(height: 10),
 
               // Texto "Bem-vindo de volta!" com contorno
@@ -89,7 +93,33 @@ class Login extends StatelessWidget {
               ),
               Padding(
                 padding: EdgeInsets.fromLTRB(40, 0, 40, 20),
-                child: PassWordField() 
+                child: PassWordField(),
+              ),
+
+              Padding(
+                padding: EdgeInsets.fromLTRB(40, 10, 40, 20),
+                child: ButtonTheme(
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Entrar',
+                      style: TextStyle(
+                        color: Color(0xFF004D40),
+                        fontFamily: "Gilroy",
+                        fontSize: 20,
+                        fontWeight: FontWeight.w900,
+                      ),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      minimumSize: const Size(200, 50), // LARGURA x ALTURA,
+                      side: BorderSide(
+                        style: BorderStyle.solid,
+                        color: Color(0xFF004D40),
+                        width: 2,
+                      ),
+                    ),
+                  ),
+                ),
               ),
             ],
           ),
@@ -111,10 +141,7 @@ class _PasswordFieldState extends State<PassWordField> {
   Widget build(BuildContext context) {
     return TextFormField(
       obscureText: obscure,
-      style: const TextStyle(
-        color: Colors.white,
-        fontFamily: "Gilroy",
-      ),
+      style: const TextStyle(color: Colors.white, fontFamily: "Gilroy"),
       decoration: InputDecoration(
         prefixIcon: Padding(
           padding: const EdgeInsets.all(12.0),
@@ -143,10 +170,7 @@ class _PasswordFieldState extends State<PassWordField> {
         border: const OutlineInputBorder(),
         labelText: "Senha",
         hintText: "Senha",
-        hintStyle: const TextStyle(
-          color: Colors.white,
-          fontFamily: "Gilroy",
-        ),
+        hintStyle: const TextStyle(color: Colors.white, fontFamily: "Gilroy"),
       ),
     );
   }
