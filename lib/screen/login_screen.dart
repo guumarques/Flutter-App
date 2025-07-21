@@ -26,7 +26,10 @@ class Login extends StatelessWidget {
         child: SingleChildScrollView(
           child: ConstrainedBox(
             constraints: BoxConstraints(
-              minHeight: MediaQuery.of(context).size.height,
+              minHeight:
+                  MediaQuery.of(context)
+                      .size
+                      .height, //define a altura da coluna para que seja pelo menos do tamanho máximo da tela, é como se expandisse a altura
             ),
             child: Center(
               child: Padding(
@@ -237,11 +240,10 @@ class ButtonEntrar extends StatelessWidget {
           ),
           style: ElevatedButton.styleFrom(
             minimumSize: const Size(320, 50), // LARGURA x ALTURA,
-            side: BorderSide(
-              style: BorderStyle.solid,
-              color: Color(0xFF004D40),
-              width: 2,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
             ),
+            backgroundColor: Colors.white,
           ),
         ),
       ),
@@ -288,6 +290,9 @@ class LoginWithGoogle extends StatelessWidget {
         child: SignInButton(
           Buttons.google,
           text: "Logar com Google",
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
           onPressed: () {},
         ),
       ),
