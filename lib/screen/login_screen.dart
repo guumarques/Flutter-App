@@ -24,27 +24,32 @@ class Login extends StatelessWidget {
           ),
         ),
         child: SingleChildScrollView(
-          child: Column(
-            children: [
-              Hero(
-                tag: 'calendar-logo',
-                child: Image.asset(
-                  "assets/images/calendar_icon.png",
-                  width: 200,
-                  height: 200,
+          child: ConstrainedBox(
+            constraints: BoxConstraints(
+              minHeight: MediaQuery.of(context).size.height,
+            ),
+            child: Center(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    BuildStack(),
+                    const SizedBox(height: 8),
+                    BuildText(),
+                    const SizedBox(height: 40),
+                    EmailField(),
+                    PassWordField(),
+                    ForgotPassword(),
+                    ButtonEntrar(),
+                    DividerText(),
+                    LoginWithGoogle(),
+                    GoToRegister(),
+                  ],
                 ),
               ),
-
-              BuildStack(),
-              const SizedBox(height: 8),
-              BuildText(),
-              EmailField(),
-              PassWordField(),
-              ForgotPassword(),
-              ButtonEntrar(),
-              LoginWithGoogle(),
-              GoToRegister(),
-            ],
+            ),
           ),
         ),
       ),
@@ -192,17 +197,20 @@ class ForgotPassword extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.fromLTRB(40, 0, 40, 20),
         child: InkWell(
-        onTap: () {
-          Navigator.of(context).pushReplacement(_createRoute_ForgotPassword());
-        },
-        child: new Text(
-          "Esqueci minha senha",
-          style: TextStyle(
-            color: Colors.azulGaivota,
-            fontWeight: FontWeight.w900,
+          onTap: () {
+            Navigator.of(
+              context,
+            ).pushReplacement(_createRoute_ForgotPassword());
+          },
+          child: new Text(
+            "Esqueci minha senha",
+            style: TextStyle(
+              color: Colors.azulGaivota,
+              fontWeight: FontWeight.w900,
+            ),
           ),
         ),
-      ), )
+      ),
     );
   }
 }
@@ -228,13 +236,39 @@ class ButtonEntrar extends StatelessWidget {
             ),
           ),
           style: ElevatedButton.styleFrom(
-            minimumSize: const Size(200, 50), // LARGURA x ALTURA,
+            minimumSize: const Size(320, 50), // LARGURA x ALTURA,
             side: BorderSide(
               style: BorderStyle.solid,
               color: Color(0xFF004D40),
               width: 2,
             ),
           ),
+        ),
+      ),
+    );
+  }
+}
+
+class DividerText extends StatelessWidget {
+  const DividerText({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.only(right: 40, left: 40),
+        child: Row(
+          children: [
+            Expanded(child: Divider(color: Colors.white, thickness: 1)),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: Text(
+                "Ou",
+                style: TextStyle(color: Colors.white, fontFamily: "Gilroy"),
+              ),
+            ),
+            Expanded(child: Divider(color: Colors.white, thickness: 1)),
+          ],
         ),
       ),
     );
@@ -248,7 +282,7 @@ class LoginWithGoogle extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Padding(
-      padding: const EdgeInsets.fromLTRB(100, 5, 100, 20),
+      padding: const EdgeInsets.fromLTRB(50, 5, 50, 20),
       child: SizedBox(
         width: double.infinity,
         child: SignInButton(
